@@ -1,0 +1,123 @@
+
+
+a {
+    text-decoration: none;
+    color: white;
+    
+    
+
+}
+
+ul {
+    list-style: none;
+}
+
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "productos productos productos"
+    "banner banner banner"
+    "footer footer footer";
+
+    grid-template-columns: repeat(3, 1fr); 
+    background-color: green;
+
+}
+
+#navegacion {
+    display: flex;
+    gap: .8rem;
+}
+
+@media screen and (max-width: 399px){
+
+    #navegacion {
+        flex-direction: column;
+    }
+    
+}
+
+#navegacion li{
+    background-color: blue;
+    padding:  .3rem 1rem;
+    
+}
+
+#header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+
+@media screen and (max-width: 767px){
+
+    #header {
+        flex-direction: column;
+    }
+
+
+    
+}
+
+
+#productos {
+    grid-area: productos;
+}
+
+#productos h2,
+#productos p {
+    text-align: center;
+}
+
+#banner {
+    grid-area: banner;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+.padre-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    justify-items: center;
+}
+
+@media screen and ( max-width: 992px) {
+
+    .padre-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and ( max-width: 767px) {
+
+    
+
+    .padre-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    
+}
+
+.card {
+    width: 16rem;
+    border: solid .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card img {
+    width: 100%;
+}
